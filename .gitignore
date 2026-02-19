@@ -8,3 +8,4 @@ __pycache__/
 *.db
 # Variables d'entorn
 .env
+grup.db

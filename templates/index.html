@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<title>Pràctica 1 - Flask</title>
+</head>
+<body>
+<h1>Pràctica 1: Introducció a Flask</h1>
+<p>Introdueix els noms dels integrants del grup (separats per comes):</p>
+<form method="post">
+<input type="text" name="noms" placeholder="Nom1, Nom2, Nom3" required>
+<button type="submit">Enviar</button>
+</form>
+{% if grup %}
+<h2>Integrants del grup:</h2>
+<ul>
+{% for nom in grup %}
+<li>{{ nom }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+<img src="{{ url_for('static', filename='monkeyLola.png') }}" alt="Imatge de la pràctica" width="500">
+</body>
+</html>
